@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>C++ Technical Documentation</title>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <header>
+      C++ Documentation
+    </header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#Class">Class</a></li>
+      <li><a class="nav-link" href="#Object">Object</a></li>
+      <li><a class="nav-link" href="#Encapsulation">Encapsulation</a></li>
+      <li><a class="nav-link" href="#Abstraction">Abstraction</a></li>
+      <li><a class="nav-link" href="#Polymorphism">Polymorphism</a></li>
+      <li><a class="nav-link" href="#Inheritance">Inheritance</a></li>
+      <li><a class="nav-link" href="#Message_Passing">Message Passing</a></li>
+      <li><a class="nav-link" href="#For_loop">For loop</a></li>
+      <li><a class="nav-link" href="#While_loop">While loop</a></li>
+      <li><a class="nav-link" href="#Do_While_loop">Do While loop</a></li>
+      <li><a class="nav-link" href="#Switch_statement">Switch statement</a></li>
+      <li><a class="nav-link" href="#If_statement">If statement</a></li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>
+        Introduction
+      </header>
+      <div class="details">
+        <p>
+          Object-oriented programming – As the name suggests uses objects in programming. Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming. The main aim of OOP is to bind
+          together the data and the functions that operate on them so that no other part of the code can access this data except that function.
+        </p>
+        <p>
+          Advantages of C++:
+        </p>
+        <ul>
+          <li>C++ is a highly portable language and is often the language of choice for multi-device, multi-platform app development.</li>
+          <li>C++ is an object-oriented programming language and includes classes, inheritance, polymorphism, data abstraction and encapsulation.</li>
+          <li>C++ has a rich function library.</li>
+          <li>C++ allows exception handling, and function overloading which are not possible in C.</li>
+          <li>C++ is a powerful, efficient and fast language. It finds a wide range of applications – from GUI applications to 3D graphics for games to real-time mathematical simulations.</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="Class">
+      <header>
+        Class
+      </header>
+      <div class="details">
+        <p>
+          The building block of C++ that leads to Object Oriented programming is a Class. It is a user defined data type, which holds its own data members and member functions, which can be accessed and used by creating an instance of that class. A
+          class is like a blueprint for an object.
+        </p>
+        <p>
+          For Example: Consider the Class of Cars. There may be many cars with different names and brand but all of them will share some common properties like all of them will have 4 wheels, Speed Limit, Mileage range etc. So here, Car is the class
+          and wheels, speed limits, mileage are their properties.
+        </p>
+        <ul>
+          <li>A Class is a user-defined data-type which has data members and member functions.</li>
+          <li>Data members are the data variables and member functions are the functions used to manipulate these variables and together these data members and member functions define the properties and behaviour of the objects in a Class.</li>
+          <li>In the above example of class Car, the data member will be speed limit, mileage etc and member functions can apply brakes, increase speed etc.</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="Object">
+      <header>
+        Object
+      </header>
+      <div class="details">
+        <p>
+          An Object is an identifiable entity with some characteristics and behaviour. An Object is an instance of a Class. When a class is defined, no memory is allocated but when it is instantiated (i.e. an object is created) memory is allocated.
+        </p>
+        <div class="codes"><code>
+            class person <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; char name[20]; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; int id; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; public: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; void getdetails(){} <br>
+            }; <br>
+
+            int main() <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; person p1; // p1 is a object <br>
+            } <br>
+          </code></div>
+        <p>
+          Each object contains data and code to manipulate the data. Objects can interact without having to know details of each other’s data or code, it is sufficient to know the type of message accepted and type of response returned by the objects.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="Encapsulation">
+      <header>
+        Encapsulation
+      </header>
+      <div class="details">
+        <p>
+          In normal terms, Encapsulation is defined as wrapping up of data and information under a single unit. In Object Oriented Programming, Encapsulation is defined as binding together the data and the functions that manipulate them.
+        </p>
+        <p>
+          Encapsulation also leads to data abstraction or hiding. As using encapsulation also hides the data. In the above example, the data of any of the section like sales, finance or accounts are hidden from any other section.
+        </p>
+        <code>
+
+        </code>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="Abstraction">
+      <header>
+        Abstraction
+      </header>
+      <div class="details">
+        <p>
+          Data abstraction is one of the most essential and important features of object-oriented programming in C++. Abstraction means displaying only essential information and hiding the details. Data abstraction refers to providing only essential
+          information about the data to the outside world, hiding the background details or implementation.
+        </p>
+        <ul>
+          <li>
+            <strong><em>Abstraction using Classes:</em></strong> We can implement Abstraction in C++ using classes. The class helps us to group data members and member functions using available access specifiers. A Class can decide which data member
+            will be visible to the outside world and which is not.
+          </li>
+          <li>
+            <strong><em>Abstraction in Header files:</em></strong> One more type of abstraction in C++ can be header files. For example, consider the <code>pow()</code> method present in math.h header file. Whenever we need to calculate the power of
+            a number, we simply call the function <code>pow()</code> present in the math.h header file and pass the numbers as arguments without knowing the underlying algorithm according to which the function is actually calculating the power of
+            numbers.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="Polymorphism">
+      <header>
+        Polymorphism
+      </header>
+      <div class="details">
+        <p>
+          The word polymorphism means having many forms. In simple words, we can define polymorphism as the ability of a message to be displayed in more than one form.
+        </p>
+        <p>
+          An operation may exhibit different behaviours in different instances. The behaviour depends upon the types of data used in the operation.
+        </p>
+        <p>
+          C++ supports operator overloading and function overloading:
+        </p>
+        <ul>
+          <li>
+            <strong><em>Operator Overloading:</em></strong> The process of making an operator to exhibit different behaviours in different instances is known as operator overloading.
+          </li>
+          <li>
+            <strong><em>Function Overloading:</em></strong> Function overloading is using a single function name to perform different types of tasks.
+          </li>
+        </ul>
+        <div class="codes"><code>
+            int main() <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; sum1 = sum(20,30); <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; sum2 = sum(20,30,40); <br>
+            } <br>
+            <br>
+            int sum(int a, int b) <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; return(a+b); <br>
+            } <br>
+            <br>
+            int sum(int a, int b, int c) <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; return(a+b+c); <br>
+            } <br>
+          </code></div>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="Inheritance">
+      <header>
+        Inheritance
+      </header>
+      <div class="details">
+        <p>
+          The capability of a class to derive properties and characteristics from another class is called Inheritance. Inheritance is one of the most important features of Object Oriented Programming.
+        </p>
+        <ul>
+          <li>
+            <strong><em>Sub Class:</em></strong> The class that inherits properties from another class is called Sub class or Derived Class.
+          </li>
+          <li>
+            <strong><em>Super Class:</em></strong>The class whose properties are inherited by sub class is called Base Class or Super class.
+          </li>
+          <li>
+            <strong><em>Reusability:</em></strong> Inheritance supports the concept of “reusability”, i.e. when we want to create a new class and there is already a class that includes some of the code that we want, we can derive our new class from
+            the existing class. By doing this, we are reusing the fields and methods of the existing class.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="Message_Passing">
+      <header>
+        Message Passing
+      </header>
+      <div class="details">
+        <p>
+          Objects communicate with one another by sending and receiving information to each other. A message for an object is a request for execution of a procedure and therefore will invoke a function in the receiving object that generates the
+          desired results. Message passing involves specifying the name of the object, the name of the function and the information to be sent.
+        </p>
+      </div>
+    </section>
+
+    <section class="main-section" id="For_loop">
+      <header>
+        For loop
+      </header>
+      <div class="details">
+        <p>
+          The for loop is a pretest loop that combines the initialization, testing, and updating of a loop control variable in a single loop header. A loop that repeats a specific number of times is known as a count-controlled loop.
+        </p>
+        <div class="codes"><code>
+            for (initialization; test; update) <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; statement; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; statement; <br>
+            } <br>
+          </code></div>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="While_loop">
+      <header>
+        While loop
+      </header>
+      <div class="details">
+        <p>
+          The while loop has two important parts: an expression that is tested for a true or false value, and a statement or block that is repeated as long as the expression is true.
+        </p>
+        <div class="codes"><code>
+            while (condition) <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; statement; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; statement; <br>
+            } <br>
+          </code></div>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="Do_While_loop">
+      <header>
+        Do While loop
+      </header>
+      <div class="details">
+        <p>
+          The do…while repetition statement is similar to the while statement. In the while statement, the loop-continuation condition test occurs at the beginning of the loop before the body of the loop executes.
+        </p>
+        <div class="codes"><code>
+            do <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; statement; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; statement; <br>
+            } while (condition) <br>
+          </code></div>
+      </div>
+    </section>
+
+    <section class="main-section" id="Switch_statement">
+      <header>
+        Switch statement
+      </header>
+      <div class="details">
+        <p>
+          The switch statement lets the value of a variable or expression determine where the program will branch to. A branch occurs when one part of a program causes another part to execute.
+        </p>
+        <div class="codes"><code>
+            switch (IntegerExpression) <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; case ConstantExpression: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; statement; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; case ConstantExpression: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; statement; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; default: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; statement; <br>
+            } <br>
+          </code></div>
+      </div>
+    </section>
+
+
+    <section class="main-section" id="If_statement">
+      <header>
+        If statement
+      </header>
+      <div class="details">
+        <p>
+          The if statement can cause other statements to execute only under certain conditions. You might think of the statements in a procedural program as individual steps taken as you are walking down a road. To reach the destination, you must
+          start at the beginning and take each step, one after the other, until you reach the destination.
+        </p>
+        <div class="codes"><code>
+            if (condition is true) <br>
+            { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; execute statement: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; execute statement; <br>
+            } <br>
+          </code></div>
+      </div>
+    </section>
+
+
+
+    <section class="main-section" id="Reference">
+      <header>
+        Reference
+      </header>
+      <div class="details">
+        <p>
+          This article is contributed by <strong>Vankayala Karunakar</strong>.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</body>
+
+</html>
